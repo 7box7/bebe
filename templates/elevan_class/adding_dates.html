@@ -1,0 +1,44 @@
+{% extends "elevan_class/adds.html" %}
+
+
+{% block content %}
+
+    <form class="topic_form" action="/post_date/" method="post">
+        {% csrf_token %}
+        <div class="duo" id="name_date">
+            <label for="topic_name" id="top">Date name:</label>
+            <input id="topic_name" type="text" name="date_name" value="{{ date_name }}">
+        </div>
+        <div class="duo" id="redirect">
+            <label for="redirect" id="top">Month and Day exist?<br>
+            </label>
+            <input type="radio" name="without_md" id="rad">
+        </div>
+        <div class="duo" id="name_date">
+            <label for="topic_name" id="top">Date:<br>
+                <p id="minigrey">(year:month:day)</p>
+            </label>
+            <input id="topic_name" type="text" name="date" value="{{ date }}">
+        </div>
+        <div class="duo" id="country">
+            <label for="parent" id="top">Country:<br></label>
+            <input id="parent_input" name="country" list="countries" />
+            <datalist id="countries">
+                {% block countries %}
+                {% endblock %}
+            </datalist>
+        </div>
+        <div class="duo" id="period">
+            <label for="parent" id="top">Period:<br></label>
+            <input id="parent_input" name="period" list="periods" />
+            <datalist id="periods">
+                {% block periods %}
+                {% endblock %}
+            </datalist>
+        </div>
+        <div class="duo" id="submit">
+            <input type="submit" value="OK" id="ok">
+        </div>
+    </form>
+
+{% endblock %}

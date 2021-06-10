@@ -1,0 +1,47 @@
+{% extends "elevan_class/main_graf.html" %}
+
+
+{% load static %}
+{% block content %}
+<div class="about">
+    <div class="content">
+        <p>Линейная функция — это функция вида y = kx + b, где х — независимая переменная, k, b — некоторые числа. При
+            этом k —
+            угловой коэффициент, b — свободный коэффициент.</p>
+
+        <p>Геометрический смысл коэффициента b — длина отрезка, который отсекает прямая по оси OY, считая от начала
+            координат.</p>
+
+        <p>Геометрический смысл коэффициента k — угол наклона прямой к положительному направлению оси OX, считается
+            против часовой
+            стрелки.</p>
+
+        <p>Если известно конкретное значение х, можно вычислить соответствующее значение у.</p>
+
+        <p>Нам дана функция: у = 0,5х - 2. Значит:</p>
+
+        <p>если х = 0, то у = -2;
+            если х = 2, то у = -1;
+            если х = 4, то у = 0;
+            и т. д.
+            Для удобства результаты можно оформлять в виде таблицы:</p>
+
+    </div>
+
+</div>
+<div class="all">
+    <h1>График</h1>
+    <div class="center">
+        <div class="container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="changing">
+            <p id="k" class="text">K=</p>
+            <input type="range" min="-10" max="10" step="0.05" id="kslid" value="1">
+            <p id="b" class="text">B=</p>
+            <input type="range" min="-10" max="10" step="0.05" id="bslid" value="0">
+        </div>
+    </div>
+    <script src="{% static 'jsss/kxb11.js' %}" type="module"></script>
+</div>
+{% endblock %}

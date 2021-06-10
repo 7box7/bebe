@@ -1,0 +1,25 @@
+{% extends "elevan_class/main_graf.html" %}
+
+
+{% load static %}
+{% block content %}
+<div class="about">
+    <div class="content">
+
+
+    </div>
+</div>
+<div class="all">
+    <h1>График</h1>
+    <div class="center">
+        <div class="container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="changing">
+            <p id="a" class="text">A=</p>
+            <input type="range" min="-10" max="10" step="0.05" id="aslid" value="1">
+        </div>
+    </div>
+    <script src="{% static 'jsss/термодинамика28.js' %}" type="module"></script>
+</div>
+{% endblock %}

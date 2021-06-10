@@ -1,0 +1,27 @@
+{% extends "elevan_class/main_template.html" %}
+
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/testing.css' %}">
+
+<section class="menu">
+    <div class="buttons">
+        <a href="/" class="but">Главная</a>
+        <a class="but">Карта тем</a>
+        <a class="but">Задачи</a>
+        <a class="but">Вход</a>
+    </div>
+</section>
+
+<div class="about-test" id="ab-t">
+    <canvas id="canvas-basic"></canvas>
+        <div class="duo" id="name_date">
+<!--            <label for="big_text" id="top">asdasda</label>-->
+<!--            <textarea id="big_text" name="big_text"></textarea>-->
+        </div>
+    <input type="submit" id="bt" class="button" onclick="prov()" value="Следующий термин">
+    
+    <script src="{% static 'jsss/testing.js' %}" type="module"></script>
+</div>
+{% endblock %}

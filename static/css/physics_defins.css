@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(0, 91, 248);
+}
+
+
+.opreds{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    margin-bottom: 100px;
+}
+
+li {
+    margin: 20px;
+}
+
+
+.formuls {
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    margin-bottom: 100px;
+}
+
+
+#cover {
+    font-size: 20px;
+    color: rgb(236, 255, 184);
+}
+
+
+.frm{
+    background-color: rgb(41, 56, 82);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+h1{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+.content{
+    width: 80%;
+    padding-top: 100px;
+    z-index: 6;
+    padding-bottom: 100px;
+    background-color: rgb(47, 64, 93);
+}
+
+.about{
+    display: flex;
+    background-color: rgb(47, 64, 93);
+    width: 100%;
+    justify-content: center;
+}
+
+.alll{
+    width: 100%;
+    position: absolute;
+    background-color: rgb(47, 64, 93);
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

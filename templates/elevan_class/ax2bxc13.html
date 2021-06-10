@@ -1,0 +1,29 @@
+{% extends "elevan_class/main_graf.html" %}
+
+
+{% load static %}
+{% block content %}
+<div class="about">
+    <div class="content">
+
+
+    </div>
+</div>
+<div class="all">
+    <h1>График</h1>
+    <div class="center">
+        <div class="container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="changing">
+            <p id="a" class="text">A=</p>
+            <input type="range" min="-10" max="10" step="0.05" id="aslid" value="1">
+            <p id="b" class="text">B=</p>
+            <input type="range" min="-10" max="10" step="0.05" id="bslid" value="0">
+            <p id="c" class="text">C=</p>
+            <input type="range" min="-10" max="10" step="0.05" id="cslid" value="1">
+        </div>
+    </div>
+    <script src="{% static 'jsss/ax2bxc13.js' %}" type="module"></script>
+</div>
+{% endblock %}

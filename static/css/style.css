@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background-color: rgb(47, 64, 93);
+        
+}
+
+#bebe{
+    overflow: hidden;
+}
+
+canvas {
+	cursor: crosshair;
+}
+
+.changing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    font-family: 'Comfortaa', cursive;
+    
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    color: white;
+}
+
+.graf{
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.container{
+    overflow: hidden;
+    width: 1200px;
+    height: 600px;
+}
+
+.all{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1c7590;
+    padding-bottom: 100px;
+
+}
+
+
+.about{
+    display: flex;
+    background-color: rgb(47, 64, 93);
+    width: 100%;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+.content{
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+p{
+    font-family: 'Comfortaa', cursive;
+    color: rgb(255, 255, 255);
+}

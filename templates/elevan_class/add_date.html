@@ -1,0 +1,14 @@
+{% extends "elevan_class/adding_dates.html" %}
+
+
+{% block countries %}
+    {% for t in countries %}
+        <option value="{{ t.name }}" \>
+    {% endfor %}
+{% endblock %}
+
+{% block periods %}
+    {% for t in periods %}
+        <option value="{{ t.name }}" \>
+    {% endfor %}
+{% endblock %}

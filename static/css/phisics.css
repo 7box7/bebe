@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+#bebe{
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed; 
+	cursor: crosshair;
+}

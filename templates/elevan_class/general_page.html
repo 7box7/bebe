@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/general.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Knower</title>
+</head>
+<body>
+    <section class="menu">
+        <div class="buttons">
+            <a href="/" class="but">Главная</a>
+            <a class="but">Карта тем</a>
+            <a class="but">Задачи</a>
+            <a class="but">Вход</a>
+        </div>
+        <div class="explorer">
+            <div id="topic_name" class="cont">
+                <img id="exp" src="{% static 'imgs/discover.png' %}" alt="">
+                <input id="topic_name_input" type="text">
+            </div>
+        </div>
+        
+        <div class="edits">
+            <div id="c" class="cube"></div>
+            <a href="/new_info/2"><img class="plus" src="{% static 'imgs/plus.png' %}" alt=""></a>
+        </div>
+    </section>
+    <section class="blocks">
+        <div class="allin">
+            <canvas id="canvas"></canvas>
+            <div id="blocks" class="blockscontent">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div> 
+    </section>
+    <section class="contacts"></section>
+    <script type="module" src="{% static 'jsss/general.js' %}"></script>
+</body>
+</html>

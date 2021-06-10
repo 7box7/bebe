@@ -1,0 +1,8 @@
+{% extends "elevan_class/general_page.html" %}
+
+
+{% block content %}
+    {% for t in topics %}
+    <a class="block" onclick="location.href='#{{ t.id }}'"><p id="{{ t.id }}:{{ t.lvl }}">{{ t.name }}</p></a>
+    {% endfor %}
+{% endblock %}

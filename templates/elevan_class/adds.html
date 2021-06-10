@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/add_topic.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <script src="{% static 'jsss/adds.js' %}" type="module"></script>
+</head>
+
+<body>
+    <div class="content">
+        <form class="topic_form" action="/post_info/" method="post">
+            {% csrf_token %}
+        </form>
+    </div>
+</body>
+</html>

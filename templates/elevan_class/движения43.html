@@ -1,0 +1,45 @@
+{% extends "elevan_class/main_template.html" %}
+
+
+{% load static %}
+{% block content %}
+        <link rel="stylesheet" href="{% static 'css/physics_defins.css' %}">
+        <section class="menu">
+            <div class="buttons">
+                <a href="/" class="but">Главная</a>
+                <a class="but">Карта тем</a>
+                <a class="but">Задачи</a>
+                <a class="but">Вход</a>
+            </div>
+            <div class="explorer">
+                <div id="topic_name" class="cont">
+                    <img id="exp" src="{% static 'imgs/discover.png' %}" alt="">
+                    <input id="topic_name_input" type="text">
+                </div>
+            </div>
+        
+            <div class="edits">
+                <div id="c" class="cube"></div>
+                <a href="/new_info/3#43"><img class="plus" src="{% static 'imgs/plus.png' %}" alt=""></a>
+            </div>
+        </section>
+        <div class="about">
+            <div class="alll">
+                <div class="content">
+                    <h1>Определения</h1>
+                    <div class="opreds">
+                        <ul class="opreds_ul">
+                        </ul>
+                    </div>
+                    <h1>Формулы</h1>
+                    <div class="formuls">
+                        <ol>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <script src="{% static 'jsss/движения43.js' %}" type="module"></script>
+            </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "elevan_class/main_template.html" %}
+
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/hystory.css' %}">
+<section class="menu">
+    <div class="buttons">
+        <a href="/" class="but">Главная</a>
+        <a class="but">Карта тем</a>
+        <a class="but">Задачи</a>
+        <a class="but">Вход</a>
+    </div>
+    <div class="explorer">
+        <div id="topic_name" class="cont">
+            <img id="exp" src="{% static 'imgs/discover.png' %}" alt="">
+            <input id="topic_name_input" type="text">
+        </div>
+    </div>
+
+    <div class="edits">
+        <div id="c" class="cube"></div>
+        <a href="/new_date"><img class="plus" src="{% static 'imgs/plus.png' %}" alt=""></a>
+    </div>
+</section>
+<div class="about">
+    <div class="alll">
+        <div class="container_for_dates">
+            <h1 class="Russia">Россия</h1>
+            <div class="all_dates">
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'jsss/вседаты9.js' %}" type="module"></script>
+</div>
+{% endblock %}
