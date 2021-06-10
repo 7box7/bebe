@@ -15,8 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from general import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('example.urls')),
+    path('', views.general),
+    path('new_date/', views.add_date),
+    path('post_date/', views.post_date),
+    path('post_info/<int:form>', views.post_info),
+    path('get_topics/<int:parent>', views.get_topics),
+    path('information/<int:topic>', views.show_info),
+    path('get_definitions/<int:topic>', views.get_definitions),
+    path('get_topic_by_name/', views.get_topic_by_name),
+    path("get_dates/", views.get_dates),
+    path("new_info/<int:form>", views.get_form),
+    path("get_form_info/<int:form>", views.get_form_info),
+    path("testing/<int:topic>", views.tests_for_topic)
 ]
