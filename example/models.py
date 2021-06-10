@@ -35,7 +35,7 @@ class Topic(models.Model):
 
 class ChildTopic(models.Model):
     external_id = models.ForeignKey(
-        to="general.Topic",
+        to="example.Topic",
         verbose_name="ID темы",
         on_delete=models.CASCADE,
         related_name='topic_content_type'
@@ -46,7 +46,7 @@ class ChildTopic(models.Model):
     )
 
     id_topic = models.ForeignKey(
-        to="general.Topic",
+        to="example.Topic",
         verbose_name="ID Родительской темы",
         on_delete=models.CASCADE,
         null=True,
@@ -138,13 +138,13 @@ class HistoryEventDate(models.Model):
     )
 
     country = models.ForeignKey(
-        to="general.Country",
+        to="example.Country",
         verbose_name="Страна",
         on_delete=models.PROTECT,
     )
 
     period_id = models.ForeignKey(
-        to="general.HistoryPeriodDate",
+        to="example.HistoryPeriodDate",
         verbose_name="ID периода",
         on_delete=models.PROTECT,
         null=True,
@@ -171,13 +171,13 @@ class HistoryHumanDate(models.Model):
     )
 
     country = models.ForeignKey(
-        to="general.Country",
+        to="example.Country",
         verbose_name="Страна",
         on_delete=models.PROTECT,
     )
 
     who = models.ForeignKey(
-        to="general.Way",
+        to="example.Way",
         verbose_name="Направление",
         on_delete=models.PROTECT,
     )
@@ -202,7 +202,7 @@ class HistoryKingDate(models.Model):
     )
 
     country = models.ForeignKey(
-        to="general.Country",
+        to="example.Country",
         verbose_name="Страна",
         on_delete=models.PROTECT,
     )
@@ -227,7 +227,7 @@ class Definition(models.Model):
     )
 
     topic = models.ForeignKey(
-        to='general.Topic',
+        to='example.Topic',
         verbose_name="Тема",
         on_delete=models.PROTECT,
     )
@@ -248,7 +248,7 @@ class Formula(models.Model):
     )
 
     defin = models.ForeignKey(
-        to="general.Definition",
+        to="example.Definition",
         verbose_name="Понятие",
         on_delete=models.PROTECT,
     )
@@ -271,14 +271,14 @@ class AllForms(models.Model):
 
     typee = models.ForeignKey(
         verbose_name="Тип формы",
-        to="general.FormType",
+        to="example.FormType",
         on_delete=models.PROTECT,
         null=True,
         blank=True
     )
 
     topic_id = models.ForeignKey(
-        to="general.Topic",
+        to="example.Topic",
         verbose_name="Тема формы",
         on_delete=models.PROTECT,
         null=True,
