@@ -14,14 +14,14 @@ def general(request):
         print(obj)
     except:
         pass
-    childtopics = ChildTopic.objects.filter(
-        lvl_id=0,
-    )
+    #childtopics = ChildTopic.objects.filter(
+        #lvl_id=0,
+    #)
 
     context = {}
-    context["topics"] = []
-    for i in childtopics:
-        context["topics"].append({"name": i.external_id.name, "id": str(i.external_id.id), "lvl": str(i.lvl_id + 1)})
+    #context["topics"] = []
+    #for i in childtopics:
+        #context["topics"].append({"name": i.external_id.name, "id": str(i.external_id.id), "lvl": str(i.lvl_id + 1)})
     return render(request, "elevan_class/gen_info.html", context)
 
 
